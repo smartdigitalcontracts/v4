@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Digital Contract</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="black">
+            <div class="nav-wrapper">
+                <a class="brand-logo">Smart Contract</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="note blue lighten-4 center-align">
+            <i class="material-icons" style="vertical-align: bottom; margin-right: 5px">info</i> Payment addresses are generated using your browser's fingerprint.
+        </div>
+        <div class="section hide-on-small-only"></div>
+        <div class="page">
+            <div id="wallet" class="row center-align">
+                <div class="col s12 m6">
+                    <h5>Payment Address</h5>
+                    <div id="qrcode"></div>
+                    <h6 class="c-address blue-text text-darken-3">Loading ...</h6>
+                </div>
+                <div class="col s12 hide-on-med-and-up">
+                    <br>
+                    <hr>
+                </div>
+                <div class="col s12 m6">
+										<h5>Withdraw Money</h5>
+                    
+                    <!-- Lee -->
+                    <h6 class="blue-text text-darken-3">Amount Deposited - $400.00</h6>
+                    
+                    <div class="row"></div>
+                    <div class="row hide-on-small-only"></div>
+
+                    <div class="row">
+                      <div class="col m2 hide-on-small-only">&nbsp;</div>
+                      
+                      <div class="input-field col s12 m8">
+                        <select>
+                          <option value="0" selected>Paypal (Transfer Fee: 4%)</option>
+                          <option value="1">Amazon (Transfer Fee: 4%)</option>
+                          <option value="2">Wire Transfer (Transfer Fee: 2%)</option>
+                          <option value="3">Western Union (Transfer Fee: 2%)</option>
+                        </select>
+                        <label>Mode of Withdrawal</label>
+                      </div>
+
+                      <div class="col m2 hide-on-small-only">&nbsp;</div>
+                    </div>
+
+                    <div class="row">
+                        <a onclick="withdrawMoney('$1,600.00')" class="btn-large green lighten-1"><i class="material-icons left">account_balance</i> &nbsp;Withdraw Money</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer blue-grey darken-4">
+        <div class="footer-copyright">
+            <div class="container center-align">
+                <b><a class="modal-trigger white-text" href="#modal1">Why Smart Contracts? <i class="material-icons heart-icon">description</i></a></b>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Smart Contracts</h4>
+            <h5>What are they?</h5>
+            <p>A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract.</p>
+            <h5>Good for sellers</h5>
+            <p>If a buyer terminates the contract, he loses all of the deposited amount and gets a demerit point.</p>
+            <h5>Good for buyers</h5>
+            <p>Buyers can easily pay in installments to the seller.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat">Got it</a>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <h4>Payment Email Address</h4>
+
+            <br>
+
+            <div class="input-field">
+                <input id="email" type="text">
+                <label for="email">Enter your email</label>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <a onclick="requestSubmitted()" href="javascript:void(0)" class="waves-effect waves-green btn-flat">Submit</a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.8.1/fingerprint2.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
