@@ -42,7 +42,7 @@
 										<h5>Withdraw Money</h5>
                     
                     <!-- Lee -->
-                    <h6 class="blue-text text-darken-3">Amount Deposited - $300.00</h6>
+                    <h6 class="blue-text text-darken-3">Amount Deposited - $400.00</h6>
                     
                     <div class="row"></div>
                     <div class="row hide-on-small-only"></div>
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="row">
-                        <a onclick="withdrawMoney('$400.00')" class="btn-large green lighten-1"><i class="material-icons left">account_balance</i> &nbsp;Withdraw Money</a>
+                        <a onclick="detailsToEmail()" class="btn-large green lighten-1"><i class="material-icons left">account_balance</i> &nbsp;Withdraw Money</a>
                     </div>
                 </div>
             </div>
@@ -96,18 +96,13 @@
 
     <div class="modal" id="modal2">
         <div class="modal-content">
-            <h4>Payment Email Address</h4>
+            <h4>Payment Request</h4>
 
-            <br>
-
-            <div class="input-field">
-                <input id="email" type="text">
-                <label for="email">Enter your email</label>
-            </div>
+            <p>Send your account information to pistawallet@gmail.com. You'll receive the payment within 3-5 business days.</p>
         </div>
 
         <div class="modal-footer">
-            <a onclick="requestSubmitted()" href="javascript:void(0)" class="waves-effect waves-green btn-flat">Submit</a>
+            <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat">Submit</a>
         </div>
     </div>
 

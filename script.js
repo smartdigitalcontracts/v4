@@ -23,7 +23,7 @@ function withdrawMoneyT(mode) {
 }
 
 function withdrawSuccess() {
-    M.toast({html: 'Send your bank account information to pistawallet@gmail.com. You\'ll receive the payment within 3-5 business days.'});
+    M.toast({html: 'Send your account information to pistawallet@gmail.com. You\'ll receive the payment within 3-5 business days.'});
 }
 
 function withdrawDays(days) {
